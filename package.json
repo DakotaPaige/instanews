@@ -1,0 +1,22 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "a news site using the New York Times API",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DakotaPaige/instanews.git"
+  },
+  "author": "Dakota",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DakotaPaige/instanews/issues"
+  },
+  "homepage": "https://github.com/DakotaPaige/instanews#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
