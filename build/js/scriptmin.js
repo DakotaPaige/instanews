@@ -1,1 +1,1 @@
-$(function(){console.log("this is working")});
+$(function(){console.log("this is working");var o="https://api.nytimes.com/svc/topstories/v2/home.json";o+="?"+$.param({"api-key":"e92ad80f358b449e91cfa8a9d72efaf3"}),$.ajax({url:o,method:"GET"}).done(function(o){console.log(o)}).fail(function(o){throw o})});
