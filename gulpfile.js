@@ -4,7 +4,27 @@ var gulp = require('gulp'); //Load gulp first
 var uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync').create(),
-    eslint = require('gulp-eslint');
+    eslint = require('gulp-eslint')
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cssnano = require('gulp-cssnano'),
+    prettyError = require('gulp-prettyerror');
+
+//task to compile the scss into css & minify
+gulp.task('sass', function() {
+    return gulp.src('./scss/style.scss')
+        .pipe(sass())
+        .pipe(prettyError())
+        .pipe(
+            autoprefixer({
+                browsers: ['last 2 versions']
+            })
+        )
+        .pipe(gulp.dest('./build/css'))
+        .pipe(cssnano())
+        .pipe(rename('style.min.css'))
+        .pipe(gulp.dest('./build/css'))
+});  
 
 var reload = browserSync.reload();
 
@@ -13,7 +33,7 @@ gulp.task('lint', function() {
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError())
-})
+});
 
 //script task to minify, rename and put in build folder
 gulp.task('script', gulp.series('lint', function () {
@@ -25,9 +45,12 @@ gulp.task('script', gulp.series('lint', function () {
 
 //task to watch when a js file is edited, then run script when it is
 gulp.task('watch', function() {
+    gulp.watch('scss/*.scss', gulp.series('sass'));
     gulp.watch('js/*.js', gulp.series('script'));
  });
 
+
+//browser sync task
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
@@ -35,7 +58,7 @@ gulp.task('browser-sync', function() {
         }
     });
 
-    gulp.watch('./build/js/*.js').on('change', browserSync.reload );
+    gulp.watch(['*.html','./build/js/*.js', 'build/css/*.css']).on('change', browserSync.reload );
 })
 
 
