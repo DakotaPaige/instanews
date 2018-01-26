@@ -3,6 +3,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  width: 100vw;
 }
 
 section {
@@ -26,4 +27,49 @@ section {
     height: 1.5em;
   }
 }
+
+.section-change {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  height: auto;
+  @include tablet {
+    
+  }
+  @include desktop {
+
+  }
+}
+
+ul {
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.news-grid {
+  width: 100%;
+}
+
+li {
+  position: relative;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+  p {
+    margin: 0;
+    padding: 5px 10px;
+    text-align: left;
+    line-height: 1.5em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
 

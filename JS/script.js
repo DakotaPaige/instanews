@@ -4,6 +4,7 @@ $(function() {
   $ ('#news_type').change(function() {
     var selectedSection = $('#news_type option:selected').val();
     alert(selectedSection);
+    $('section').addClass('section-change');
 
     //HOME SECTION
     if (selectedSection === 'home') {
@@ -19,14 +20,17 @@ $(function() {
       }).done(function(data) {
         var results = data.results;
         console.log(results);
-        i = 0;
 
         //iterates through each key value, grabs the description, prints it to the console and stops when it hits 12
         $.each(results, function(key,value) {
+          var multimedia = value.multimedia;
+          if (multimedia.length === 0) {
+            return
+          }
           var description = value.abstract;
           console.log(description);
           //iterates through each key value only in multimedia and grabs only the SuperJumbo image and puts it in imageURL
-          $.each(value.multimedia, function(key,value) {
+          $.each(multimedia, function(key,value) {
             if (value.format === "superJumbo") {
               var imageURL = value.url;
               var listItem = '';
@@ -46,7 +50,9 @@ $(function() {
 
           console.log(listItem);
           })
-          return (key != 11)
+
+          //ends the each function when the key equals 11 (12 list items)
+          return (key != 12)
         })
 
 
