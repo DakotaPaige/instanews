@@ -4,6 +4,7 @@ body {
   margin-right: auto;
   text-align: center;
   width: 100vw;
+  height: 100%;
 }
 
 section {
@@ -12,9 +13,18 @@ section {
   font-weight: 300;
   font-style: normal;
   color: white;
+  min-height: 100%;
   @include tablet {
     display: flex;
-    padding-left: 30%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .topbar {
+      display: flex;
+      flex-direction: row;
+    }
   }
   @include desktop {
     padding-left: 5%;
@@ -25,19 +35,37 @@ section {
 #news_type {
   @include tablet {
     height: 1.5em;
+    width: 130px;
   }
 }
 
+//style applies only when user has chosen a category
 .section-change {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5%;
+  padding-top: 2%;
   height: auto;
+  padding-left: 0;
   @include tablet {
-    
+    .topbar img {
+      width: 70px;
+      height: 100px;
+    }
   }
   @include desktop {
 
+  }
+  .topbar {
+    @include tablet {
+      margin-left: 2%;
+      width: 100%;
+      padding-left: 10%;
+
+      .choose_section {
+        padding-left: 4em;
+      }
+    }
+    @include desktop {
+      padding-left: 0;
+    }
   }
 }
 
@@ -48,6 +76,12 @@ ul {
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
+  @include tablet {
+
+  }
+  @include desktop {
+
+  }
 }
 
 .news-grid {
@@ -57,18 +91,29 @@ ul {
 li {
   position: relative;
   img {
+    height: 100vw;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
   p {
     margin: 0;
-    padding: 5px 10px;
+    padding: 10px 10px;
+    overflow: none;
     text-align: left;
     line-height: 1.5em;
     position: absolute;
+    margin-top: auto;
     bottom: 0;
-    width: 100%;
+    max-width: 100%;
     background: rgba(0, 0, 0, 0.7);
+  }
+  @include tablet {
+    width: 50%;
+    height: 50vw;
+    object-fit: contain;
+  }
+  @include desktop {
+    width: 25%;
   }
 }
 

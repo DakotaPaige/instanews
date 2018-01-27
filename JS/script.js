@@ -52,7 +52,7 @@ $(function() {
           })
 
           //ends the each function when the key equals 11 (12 list items)
-          return (key != 12)
+          return (key != 11)
         })
 
 
