@@ -109,11 +109,17 @@ li {
   }
   @include tablet {
     width: 50%;
-    height: 50vw;
-    object-fit: contain;
+    height: 59vh;
+    img {
+      height: 59vh;
+    }
   }
   @include desktop {
     width: 25%;
+    height: 38vw;
+    img {
+      height: 38vw;
+    }
   }
 }
 
