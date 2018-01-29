@@ -1,8 +1,5 @@
 $(function() {
-  $('select').selectric({
-    allowWrap: false,
-    maxHeight: 300
-  });
+  
   $ ('#news_type').change(function() {
     var selectedSection = $('#news_type option:selected').val();
     $('section').addClass('section-change');
