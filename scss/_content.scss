@@ -12,6 +12,7 @@ section {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-size: $font-size;
   color: white;
   min-height: 100%;
   @include tablet {
@@ -24,11 +25,17 @@ section {
     .topbar {
       display: flex;
       flex-direction: row;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   @include desktop {
     padding-left: 5%;
     padding-top: 15%;
+
+    .topbar {
+      margin-left: 2%;
+    }
   }
 }
 
@@ -37,6 +44,11 @@ section {
     height: 1.5em;
     width: 130px;
   }
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 //style applies only when user has chosen a category
@@ -56,8 +68,8 @@ section {
   .topbar {
     @include tablet {
       margin-left: 2%;
-      width: 100%;
-      padding-left: 10%;
+      max-width: 100%;
+      // padding-left: 10%;
 
       .choose_section {
         padding-left: 4em;
@@ -65,6 +77,9 @@ section {
     }
     @include desktop {
       padding-left: 0;
+      .topbar {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -121,6 +136,18 @@ li {
       height: 38vw;
     }
   }
+}
+
+.loading-gif {
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  display: none;
 }
 
 

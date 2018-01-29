@@ -39,6 +39,7 @@ section {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-size: 16px;
   color: white;
   min-height: 100%; }
   @media (min-width: 600px) {
@@ -61,16 +62,24 @@ section {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
-                flex-direction: row; } }
+                flex-direction: row;
+        margin-left: auto;
+        margin-right: auto; } }
   @media (min-width: 1000px) {
     section {
       padding-left: 5%;
-      padding-top: 15%; } }
+      padding-top: 15%; }
+      section .topbar {
+        margin-left: 2%; } }
 
 @media (min-width: 600px) {
   #news_type {
     height: 1.5em;
     width: 130px; } }
+
+a {
+  color: white;
+  text-decoration: none; }
 
 .section-change {
   padding-top: 2%;
@@ -83,13 +92,14 @@ section {
   @media (min-width: 600px) {
     .section-change .topbar {
       margin-left: 2%;
-      width: 100%;
-      padding-left: 10%; }
+      max-width: 100%; }
       .section-change .topbar .choose_section {
         padding-left: 4em; } }
   @media (min-width: 1000px) {
     .section-change .topbar {
-      padding-left: 0; } }
+      padding-left: 0; }
+      .section-change .topbar .topbar {
+        max-width: 100%; } }
 
 ul {
   display: -webkit-box;
@@ -139,17 +149,31 @@ li {
       li img {
         height: 38vw; } }
 
+.loading-gif {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  display: none; }
+  .loading-gif img {
+    height: 50px;
+    width: 50px; }
+
 footer {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #c2c2c2;
-  bottom: 3em;
-  width: 100%;
+  position: relative;
+  top: 15em;
+  max-width: 100%;
   text-align: center;
-  height: 50px;
-  margin-top: 50px; }
+  height: 50px; }
   @media (min-width: 1000px) {
     footer {
       padding-left: 8%;
       text-align: left; } }
+
+.loaded-footer {
+  bottom: 1em;
+  position: relative; }

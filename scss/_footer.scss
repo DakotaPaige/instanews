@@ -3,15 +3,19 @@ footer {
   font-weight: 300;
   font-style: normal;
   color: #c2c2c2;
-  bottom: 3em;
-  width: 100%;
+  position: relative;
+  top: 15em;
+  max-width: 100%;
   text-align: center;
   height: 50px;
-  margin-top: 50px;
-  // margin-top: 30%;
   
   @include desktop {
     padding-left: 8%;
     text-align: left;
   }
+}
+
+.loaded-footer {
+  bottom: 1em;
+  position: relative;
 }
