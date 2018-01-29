@@ -20,7 +20,7 @@ $(function() {
       }).done(function(data) {
         var results = data.results;
         console.log(results);
-
+        var imageListLength = 0;
         //iterates through each key value, grabs the description, prints it to the console and stops when it hits 12
         $.each(results, function(key,value) {
           var multimedia = value.multimedia;
@@ -51,8 +51,10 @@ $(function() {
           console.log(listItem);
           })
 
+          imageListLength++;
+          console.log(imageListLength);
           //ends the each function when the key equals 11 (12 list items)
-          return (key != 11)
+          return (imageListLength != 12)
         })
 
 
