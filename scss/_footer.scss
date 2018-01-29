@@ -2,6 +2,7 @@ footer {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-size: $font-size;
   color: #c2c2c2;
   position: relative;
   top: 15em;
@@ -10,7 +11,7 @@ footer {
   height: 50px;
   
   @include desktop {
-    padding-left: 8%;
+    padding-left: 3%;
     text-align: left;
   }
 }
@@ -18,4 +19,9 @@ footer {
 .loaded-footer {
   bottom: 1em;
   position: relative;
+  top: 0;
+}
+
+span {
+  text-transform: uppercase;
 }

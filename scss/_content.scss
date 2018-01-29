@@ -40,6 +40,7 @@ section {
 }
 
 #news_type {
+  width: 100px;
   @include tablet {
     height: 1.5em;
     width: 130px;
@@ -91,6 +92,7 @@ ul {
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
+  // transition: all 1s ease-in;
   @include tablet {
 
   }
@@ -105,6 +107,7 @@ ul {
 
 li {
   position: relative;
+  transition: all 0.5s ease-in;
   img {
     height: 100vw;
     width: 100%;
