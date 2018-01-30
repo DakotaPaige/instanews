@@ -467,12 +467,10 @@ section {
       section .topbar {
         margin-left: 2%; } }
 
-#news_type {
-  width: 100px; }
-  @media (min-width: 600px) {
-    #news_type {
-      height: 1.5em;
-      width: 130px; } }
+@media (min-width: 600px) {
+  #news_type {
+    height: 1.5em;
+    width: 130px; } }
 
 a {
   color: white;
@@ -481,7 +479,9 @@ a {
 .section-change {
   padding-top: 2%;
   height: auto;
-  padding-left: 0; }
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   @media (min-width: 600px) {
     .section-change .topbar img {
       width: 70px;

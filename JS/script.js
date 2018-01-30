@@ -55,7 +55,7 @@ $(function() {
 
           imageListLength++;
           $('footer').addClass('loaded-footer');
-          //ends the each function when the key equals 11 (12 list items)
+          //ends the each function when the imageListLength equals 12
           return (imageListLength !== 12)
         })
         $('.loading-gif').hide();
