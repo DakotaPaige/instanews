@@ -1,5 +1,6 @@
 $(function() {
   
+  //function to change the populated stories upon user change of select menu
   $ ('#news_type').change(function() {
     let selectedSection = $('#news_type option:selected').val();
     $('section').addClass('section-change');
@@ -53,5 +54,5 @@ $(function() {
       $('.loading-gif').append(errorMessage);
       throw err;
     });
-  }) 
+  })
 })

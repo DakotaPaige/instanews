@@ -2,6 +2,7 @@
 
 $(function () {
 
+  //function to change the populated stories upon user change of select menu
   $('#news_type').change(function () {
     var selectedSection = $('#news_type option:selected').val();
     $('section').addClass('section-change');

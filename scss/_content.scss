@@ -92,43 +92,43 @@ ul {
 
 .news-grid {
   width: 100%;
+
+  li {
+    position: relative;
+    transition: all 0.5s ease-in;
+    img {
+      height: 100vw;
+      width: 100%;
+      object-fit: cover;
+    }
+    p {
+      margin: 0;
+      padding: 10px 10px;
+      text-align: left;
+      line-height: 1.5em;
+      position: absolute;
+      margin-top: auto;
+      bottom: 0;
+      max-width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    @include tablet {
+      width: 50%;
+      height: 59vh;
+      img {
+        height: 59vh;
+      }
+    }
+    @include desktop {
+      width: 25%;
+      height: 38vw;
+      img {
+        height: 38vw;
+      }
+    }
+  }
 }
 
-li {
-  position: relative;
-  transition: all 0.5s ease-in;
-  img {
-    height: 100vw;
-    width: 100%;
-    object-fit: cover;
-  }
-  p {
-    margin: 0;
-    padding: 10px 10px;
-    overflow: none;
-    text-align: left;
-    line-height: 1.5em;
-    position: absolute;
-    margin-top: auto;
-    bottom: 0;
-    max-width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-  }
-  @include tablet {
-    width: 50%;
-    height: 59vh;
-    img {
-      height: 59vh;
-    }
-  }
-  @include desktop {
-    width: 25%;
-    height: 38vw;
-    img {
-      height: 38vw;
-    }
-  }
-}
 
 .loading-gif {
   img {
