@@ -1,9 +1,9 @@
 footer {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: $main-font;
   font-weight: 300;
   font-style: normal;
   font-size: $font-size;
-  color: #c2c2c2;
+  color: $color__font-footer;
   position: relative;
   top: 15em;
   max-width: 100%;
