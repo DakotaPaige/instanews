@@ -49,6 +49,8 @@ $(function() {
       $('.loading-gif').hide();
 
     }).fail(err => {
+      let errorMessage = '<p>Sorry! There was a problem, please try again.</p>'
+      $('.loading-gif').append(errorMessage);
       throw err;
     });
   }) 
