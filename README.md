@@ -2,7 +2,7 @@
 
 Project designing an HTML/CSS website that uses the jQuery ajax method to populate the homepage with information from the New York Times Top Stories API. 
 
-![Sample of Instanews](instanews-sample.gif)
+![Sample of Instanews](instanews-gif.gif)
 
 ## Features
 
