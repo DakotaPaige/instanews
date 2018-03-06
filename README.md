@@ -2,6 +2,8 @@
 
 Project designing an HTML/CSS website that uses the jQuery ajax method to populate the homepage with information from the New York Times Top Stories API. 
 
+![Sample of Instanews](instanews-sample.gif)
+
 ## Features
 
 Used the jQuery AJAX method to get the data from the New York Times API. Learned how to iterate through multiple objects using the .each function.
