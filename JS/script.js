@@ -1,9 +1,9 @@
 $(function() {
   
   $ ('#news_type').change(function() {
-    var selectedSection = $('#news_type option:selected').val();
+    let selectedSection = $('#news_type option:selected').val();
     $('section').addClass('section-change');
-    var url = '';
+    let url = '';
     $('.loading-gif').show();
 
     //HOME SECTION
@@ -17,33 +17,23 @@ $(function() {
       $.ajax({
         url: url,
         method: 'GET',
-      }).done(function(data) {
-        var results = data.results;
-        var imageListLength = 0;
+      }).done(data => {
+        let results = data.results;
+        let imageListLength = 0;
         //iterates through each key value, grabs the description, prints it to the console and stops when it hits 12
-        $.each(results, function(key,value) {
-          var multimedia = value.multimedia;
+        $.each(results, (key,value) => {
+          let multimedia = value.multimedia;
           if (multimedia.length === 0) {
             return
           }
-          var description = value.abstract;
-          var articleURL = value.url;
+          let description = value.abstract;
+          let articleURL = value.url;
 
           //iterates through each key value only in multimedia and grabs only the SuperJumbo image and puts it in imageURL
-          $.each(multimedia, function(key,value) {
+          $.each(multimedia, (key,value) => {
             if (value.format === 'superJumbo') {
-              var imageURL = value.url;
-              var listItem = '';
-              listItem+='<li>';
-              listItem+='<a href = "'
-              listItem+=articleURL;
-              listItem+='" target="_blank">'
-              listItem+='<img src = "'
-              listItem+=imageURL;
-              listItem+='">';
-              listItem+='<p>';
-              listItem+=description;
-              listItem+='</p></a></li>'
+              let imageURL = value.url;
+              let listItem = `<li><a href = "${articleURL}" target="_blank"><img src = "${imageURL}"><p>${description}</p></a></li>`;
               $('ul').append(listItem);
             }
             else {
@@ -60,7 +50,7 @@ $(function() {
         })
         $('.loading-gif').hide();
 
-      }).fail(function(err) {
+      }).fail(err => {
         throw err;
       });
     }
@@ -75,31 +65,21 @@ $(function() {
       $.ajax({
         url: url,
         method: 'GET',
-      }).done(function(data) {
-        var results = data.results;
-        var imageListLength = 0;
-        $.each(results, function(key, value) {
-          var multimedia = value.multimedia;
+      }).done(data => {
+        let results = data.results;
+        let imageListLength = 0;
+        $.each(results, (key, value) => {
+          let multimedia = value.multimedia;
           if (multimedia.length === 0) {
             return
           }
-          var description = value.abstract;
-          var articleURL = value.url;
+          let description = value.abstract;
+          let articleURL = value.url;
 
-          $.each(multimedia, function(key, value) {
+          $.each(multimedia, (key, value) => {
             if (value.format === 'superJumbo') {
-              var imageURL = value.url;
-              var listItem = '';
-              listItem+='<li>';
-              listItem+='<a href = "'
-              listItem+=articleURL;
-              listItem+='" target="_blank">'
-              listItem+='<img src = "'
-              listItem+=imageURL;
-              listItem+='">';
-              listItem+='<p>';
-              listItem+=description;
-              listItem+='</p></a></li>'
+              let imageURL = value.url;
+              let listItem = `<li><a href = "${articleURL}" target="_blank"><img src = "${imageURL}"><p>${description}</p></a></li>`;
               $('ul').append(listItem);
             }
             else {
@@ -115,7 +95,7 @@ $(function() {
 
         $('.loading-gif').hide();
 
-      }).fail(function(err) {
+      }).fail(err => {
         throw err;
       });
     }
@@ -130,32 +110,22 @@ $(function() {
       $.ajax({
         url: url,
         method: 'GET',
-      }).done(function(data) {
-        var results = data.results;
-        var imageListLength = 0;
+      }).done(data => {
+        let results = data.results;
+        let imageListLength = 0;
 
-        $.each(results, function(key, value) {
-          var multimedia = value.multimedia;
+        $.each(results, (key, value) => {
+          let multimedia = value.multimedia;
           if (multimedia.length === 0) {
             return
           }
-          var description = value.abstract;
-          var articleURL = value.url;
+          let description = value.abstract;
+          let articleURL = value.url;
 
-          $.each(multimedia, function(key, value) {
+          $.each(multimedia, (key, value) => {
             if (value.format === 'superJumbo') {
-              var imageURL = value.url;
-              var listItem = '';
-              listItem+='<li>';
-              listItem+='<a href = "'
-              listItem+=articleURL;
-              listItem+='" target="_blank">'
-              listItem+='<img src = "'
-              listItem+=imageURL;
-              listItem+='">';
-              listItem+='<p>';
-              listItem+=description;
-              listItem+='</p></a></li>'
+              let imageURL = value.url;
+              let listItem = `<li><a href = "${articleURL}" target="_blank"><img src = "${imageURL}"><p>${description}</p></a></li>`;
               $('ul').append(listItem);
             }
             else {
@@ -170,7 +140,7 @@ $(function() {
 
         $('.loading-gif').hide();
 
-      }).fail(function(err) {
+      }).fail(err => {
         throw err;
       });
     }
@@ -185,32 +155,22 @@ $(function() {
       $.ajax({
         url: url,
         method: 'GET',
-      }).done(function(data) {
-        var results = data.results;
-        var imageListLength = 0;
+      }).done(data => {
+        let results = data.results;
+        let imageListLength = 0;
 
-        $.each(results, function(key,value) {
-          var multimedia = value.multimedia;
+        $.each(results, (key,value) => {
+          let multimedia = value.multimedia;
           if (multimedia.length === 0) {
             return
           }
-          var description = value.abstract;
-          var articleURL = value.url;
+          let description = value.abstract;
+          let articleURL = value.url;
 
-          $.each(multimedia, function(key, value) {
+          $.each(multimedia, (key, value) => {
             if (value.format === 'superJumbo') {
-              var imageURL = value.url;
-              var listItem = '';
-              listItem+='<li>';
-              listItem+='<a href = "'
-              listItem+=articleURL;
-              listItem+='" target="_blank">'
-              listItem+='<img src = "'
-              listItem+=imageURL;
-              listItem+='">';
-              listItem+='<p>';
-              listItem+=description;
-              listItem+='</p></a></li>'
+              let imageURL = value.url;
+              let listItem = `<li><a href = "${articleURL}" target="_blank"><img src = "${imageURL}"><p>${description}</p></a></li>`;
               $('ul').append(listItem);
             }
             else {
@@ -225,7 +185,7 @@ $(function() {
         $('.loading-gif').hide();
 
 
-      }).fail(function(err) {
+      }).fail(err => {
         throw err;
       });
     }
@@ -240,33 +200,23 @@ $(function() {
       $.ajax({
         url: url,
         method: 'GET',
-      }).done(function(data) {
-        var results = data.results;
-        var imageListLength = 0;
+      }).done(data => {
+        let results = data.results;
+        let imageListLength = 0;
 
-        $.each(results, function(key, value) {
-          var multimedia = value.multimedia;
+        $.each(results, (key, value) => {
+          let multimedia = value.multimedia;
           if (multimedia.length === 0){
             return
           }
           
-          var description = value.abstract;
-          var articleURL = value.url;
+          let description = value.abstract;
+          let articleURL = value.url;
 
-          $.each(multimedia, function(key, value) {
+          $.each(multimedia, (key, value) => {
             if (value.format === 'superJumbo') {
-              var imageURL = value.url;
-              var listItem = '';
-              listItem+='<li>';
-              listItem+='<a href = "'
-              listItem+=articleURL;
-              listItem+='" target="_blank">'
-              listItem+='<img src = "'
-              listItem+=imageURL;
-              listItem+='">';
-              listItem+='<p>';
-              listItem+=description;
-              listItem+='</p></a></li>'
+              let imageURL = value.url;
+              let listItem = `<li><a href = "${articleURL}" target="_blank"><img src = "${imageURL}"><p>${description}</p></a></li>`;
               $('ul').append(listItem);
             }
             else {
@@ -281,7 +231,7 @@ $(function() {
         $('.loading-gif').hide();
 
 
-      }).fail(function(err) {
+      }).fail(err => {
         throw err;
       });
     }
@@ -296,32 +246,22 @@ $(function() {
       $.ajax({
         url: url,
         method: 'GET',
-      }).done(function(data) {
-        var results = data.results;
-        var imageListLength = 0;
+      }).done(data => {
+        let results = data.results;
+        let imageListLength = 0;
 
-        $.each(results, function(key, value) {
-          var multimedia = value.multimedia;
+        $.each(results, (key, value) => {
+          let multimedia = value.multimedia;
           if (multimedia.length === 0) {
             return
           }
-          var description = value.abstract;
-          var articleURL = value.url;
+          let description = value.abstract;
+          let articleURL = value.url;
 
-          $.each(multimedia, function(key, value) {
+          $.each(multimedia, (key, value) => {
             if (value.format === 'superJumbo') {
-              var imageURL = value.url;
-              var listItem = '';
-              listItem+='<li>';
-              listItem+='<a href = "'
-              listItem+=articleURL;
-              listItem+='" target="_blank">'
-              listItem+='<img src = "'
-              listItem+=imageURL;
-              listItem+='">';
-              listItem+='<p>';
-              listItem+=description;
-              listItem+='</p></a></li>'
+              let imageURL = value.url;
+              let listItem = `<li><a href = "${articleURL}" target="_blank"><img src = "${imageURL}"><p>${description}</p></a></li>`;
               $('ul').append(listItem);
             }
             else {
@@ -336,7 +276,7 @@ $(function() {
         $('.loading-gif').hide();
 
 
-      }).fail(function(err) {
+      }).fail(err => {
         throw err;
       });
     }

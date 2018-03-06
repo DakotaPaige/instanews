@@ -35,17 +35,7 @@ $(function () {
           $.each(multimedia, function (key, value) {
             if (value.format === 'superJumbo') {
               var imageURL = value.url;
-              var listItem = '';
-              listItem += '<li>';
-              listItem += '<a href = "';
-              listItem += articleURL;
-              listItem += '" target="_blank">';
-              listItem += '<img src = "';
-              listItem += imageURL;
-              listItem += '">';
-              listItem += '<p>';
-              listItem += description;
-              listItem += '</p></a></li>';
+              var listItem = '<li><a href = "' + articleURL + '" target="_blank"><img src = "' + imageURL + '"><p>' + description + '</p></a></li>';
               $('ul').append(listItem);
             } else {
               return;
@@ -87,17 +77,7 @@ $(function () {
             $.each(multimedia, function (key, value) {
               if (value.format === 'superJumbo') {
                 var imageURL = value.url;
-                var listItem = '';
-                listItem += '<li>';
-                listItem += '<a href = "';
-                listItem += articleURL;
-                listItem += '" target="_blank">';
-                listItem += '<img src = "';
-                listItem += imageURL;
-                listItem += '">';
-                listItem += '<p>';
-                listItem += description;
-                listItem += '</p></a></li>';
+                var listItem = '<li><a href = "' + articleURL + '" target="_blank"><img src = "' + imageURL + '"><p>' + description + '</p></a></li>';
                 $('ul').append(listItem);
               } else {
                 return;
@@ -140,17 +120,7 @@ $(function () {
               $.each(multimedia, function (key, value) {
                 if (value.format === 'superJumbo') {
                   var imageURL = value.url;
-                  var listItem = '';
-                  listItem += '<li>';
-                  listItem += '<a href = "';
-                  listItem += articleURL;
-                  listItem += '" target="_blank">';
-                  listItem += '<img src = "';
-                  listItem += imageURL;
-                  listItem += '">';
-                  listItem += '<p>';
-                  listItem += description;
-                  listItem += '</p></a></li>';
+                  var listItem = '<li><a href = "' + articleURL + '" target="_blank"><img src = "' + imageURL + '"><p>' + description + '</p></a></li>';
                   $('ul').append(listItem);
                 } else {
                   return;
@@ -193,17 +163,7 @@ $(function () {
                 $.each(multimedia, function (key, value) {
                   if (value.format === 'superJumbo') {
                     var imageURL = value.url;
-                    var listItem = '';
-                    listItem += '<li>';
-                    listItem += '<a href = "';
-                    listItem += articleURL;
-                    listItem += '" target="_blank">';
-                    listItem += '<img src = "';
-                    listItem += imageURL;
-                    listItem += '">';
-                    listItem += '<p>';
-                    listItem += description;
-                    listItem += '</p></a></li>';
+                    var listItem = '<li><a href = "' + articleURL + '" target="_blank"><img src = "' + imageURL + '"><p>' + description + '</p></a></li>';
                     $('ul').append(listItem);
                   } else {
                     return;
@@ -246,17 +206,7 @@ $(function () {
                   $.each(multimedia, function (key, value) {
                     if (value.format === 'superJumbo') {
                       var imageURL = value.url;
-                      var listItem = '';
-                      listItem += '<li>';
-                      listItem += '<a href = "';
-                      listItem += articleURL;
-                      listItem += '" target="_blank">';
-                      listItem += '<img src = "';
-                      listItem += imageURL;
-                      listItem += '">';
-                      listItem += '<p>';
-                      listItem += description;
-                      listItem += '</p></a></li>';
+                      var listItem = '<li><a href = "' + articleURL + '" target="_blank"><img src = "' + imageURL + '"><p>' + description + '</p></a></li>';
                       $('ul').append(listItem);
                     } else {
                       return;
@@ -298,17 +248,7 @@ $(function () {
                     $.each(multimedia, function (key, value) {
                       if (value.format === 'superJumbo') {
                         var imageURL = value.url;
-                        var listItem = '';
-                        listItem += '<li>';
-                        listItem += '<a href = "';
-                        listItem += articleURL;
-                        listItem += '" target="_blank">';
-                        listItem += '<img src = "';
-                        listItem += imageURL;
-                        listItem += '">';
-                        listItem += '<p>';
-                        listItem += description;
-                        listItem += '</p></a></li>';
+                        var listItem = '<li><a href = "' + articleURL + '" target="_blank"><img src = "' + imageURL + '"><p>' + description + '</p></a></li>';
                         $('ul').append(listItem);
                       } else {
                         return;
