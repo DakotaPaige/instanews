@@ -102,8 +102,12 @@ ul {
       object-fit: cover;
     }
     p {
+      overflow: hidden;
+      height: 0;
       margin: 0;
-      padding: 10px 10px;
+      padding: 0;
+      padding-left: 10px;
+      padding-right: 10px;
       text-align: left;
       line-height: 1.5em;
       position: absolute;
@@ -111,6 +115,11 @@ ul {
       bottom: 0;
       max-width: 100%;
       background: rgba(0, 0, 0, 0.7);
+      transition: height 0.7s ease-in-out;
+    }
+    &:hover p {
+      height: 35%;
+      padding: 10px 10px;
     }
     @include tablet {
       width: 50%;

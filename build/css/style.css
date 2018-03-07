@@ -526,15 +526,24 @@ ul {
       -o-object-fit: cover;
          object-fit: cover; }
     .news-grid li p {
+      overflow: hidden;
+      height: 0;
       margin: 0;
-      padding: 10px 10px;
+      padding: 0;
+      padding-left: 10px;
+      padding-right: 10px;
       text-align: left;
       line-height: 1.5em;
       position: absolute;
       margin-top: auto;
       bottom: 0;
       max-width: 100%;
-      background: rgba(0, 0, 0, 0.7); }
+      background: rgba(0, 0, 0, 0.7);
+      -webkit-transition: height 0.7s ease-in-out;
+      transition: height 0.7s ease-in-out; }
+    .news-grid li:hover p {
+      height: 35%;
+      padding: 10px 10px; }
     @media (min-width: 600px) {
       .news-grid li {
         width: 50%;
