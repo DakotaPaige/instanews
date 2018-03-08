@@ -94,32 +94,36 @@ ul {
   width: 100%;
 
   li {
+    width: 100%;
     position: relative;
     transition: all 0.5s ease-in;
+    overflow: hidden;
     img {
       height: 100vw;
       width: 100%;
       object-fit: cover;
     }
     p {
-      overflow: hidden;
-      height: 0;
+      height: 35%;
       margin: 0;
-      padding: 0;
+      padding: 10px;
       padding-left: 10px;
       padding-right: 10px;
       text-align: left;
       line-height: 1.5em;
       position: absolute;
       margin-top: auto;
-      bottom: 0;
-      max-width: 100%;
+      // top: 100%;
+      transform: translateY(100%);
+      width: 100%;
       background: rgba(0, 0, 0, 0.7);
-      transition: height 0.7s ease-in-out;
+      transition: 0.5s ease-in-out;
+      box-sizing: border-box;
     }
     &:hover p {
-      height: 35%;
       padding: 10px 10px;
+      // top: 65%;
+      transform: translateY(-100%);
     }
     @include tablet {
       width: 50%;

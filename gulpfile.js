@@ -74,17 +74,5 @@ gulp.task('browser-sync', function() {
 })
 
 
-// gulp.task('css-watch', function(done) {
-//     browserSync.init({
-//         server: {
-//             baseDir: "./"
-//         }
-//     });
-//     gulp.watch('*.css', function() {
-//         browserSync.reload();
-//         done();
-//     })
-// });
-
 //default function that can reference multiple named tasks
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));
